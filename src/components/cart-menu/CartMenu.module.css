@@ -1,0 +1,32 @@
+.cartmenu {
+	position: absolute;
+	top: 40px;
+	right: -5px;
+	background-color: rgb(36, 37, 41);
+	width: 400px;
+	padding: 10px 20px;
+	z-index: 2;
+	border-radius: 15px;
+	user-select: none;
+	min-height: 80px;
+}
+
+.wrapper {
+	margin-top: 20px;
+	padding: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.total_price {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+
+.cart_empty {
+	font-size: 1.1em;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

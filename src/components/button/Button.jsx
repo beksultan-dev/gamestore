@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import './button.css';
+import { useDispatch } from 'react-redux';
 
 const Button = ({ onClick, type, children, size = 's' }) => {
 	const btnClasses = classNames({

@@ -1,5 +1,5 @@
-import { calcTotalPrice } from '../../utils/totalPrice';
-import Button from '../button/Button';
+import { calcTotalPrice } from '../../../utils/totalPrice';
+import Button from '../../button/Button';
 import CartItem from '../cart-item/CartItem';
 import styles from './CartMenu.module.css';
 

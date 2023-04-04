@@ -1,4 +1,4 @@
-import GameItem from '../../components/game-item/GameItem';
+import GameItem from '../../components/game/game-item/GameItem';
 import styles from './HomePage.module.css';
 
 const HomePage = () => {

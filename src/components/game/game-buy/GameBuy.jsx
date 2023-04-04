@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, deleteFromCart } from '../../store/cart/reducer';
-import Button from '../button/Button';
+import { addToCart, deleteFromCart } from '../../../store/cart/reducer';
+import Button from '../../button/Button';
 import styles from './GameBuy.module.css';
 
-const GameBuy = ({ price, game }) => {
+const GameBuy = ({ game }) => {
 	const dispatch = useDispatch();
 	const items = useSelector((state) => state.cart.itemsInCart);
 	const isItemInCart = items.some((item) => item.id === game.id);
@@ -19,7 +19,7 @@ const GameBuy = ({ price, game }) => {
 
 	return (
 		<div className={styles.gamebuy}>
-			<span className={styles.price}>{price} сом </span>
+			<span className={styles.price}>{game.price} сом </span>
 			<Button
 				type={isItemInCart ? 'secondary' : 'primary'}
 				onClick={handleClick}

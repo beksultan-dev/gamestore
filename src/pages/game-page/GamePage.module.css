@@ -1,0 +1,31 @@
+.content {
+	display: flex;
+}
+
+.left {
+	width: 70%;
+}
+
+.right {
+	width: 30%;
+}
+
+.buy_game {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+
+.genres {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.text {
+	color: rgb(80, 82, 84);
+}
+
+.title {
+	margin-top: 0;
+}

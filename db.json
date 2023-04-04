@@ -9,7 +9,7 @@
 				"Открытый мир"
 			],
 			"price": 2343,
-			"video": "https: //www.youtube.com/embed/FYH9n37B7Yw",
+			"video": "https://www.youtube.com/embed/FYH9n37B7Yw",
 			"id": 1,
 			"description": "Вас ждёт бесконечный калейдоскоп приключений Horizon! Совершайте увлекательные поездки по невероятно красивому и самобытному миру Мексики за рулём величайших автомобилей в истории. Начните своё приключение Horizon уже сегодня, добавив игру в свой список желаний!"
 		},
@@ -21,7 +21,7 @@
 				"Шутер",
 				"Война"
 			],
-			"video": "https: //www.youtube.com/embed/ASzOzrB-a9E",
+			"video": "https://www.youtube.com/embed/ASzOzrB-a9E",
 			"price": 2433,
 			"id": 2,
 			"description": "Battlefield™ 2042 — это шутер от первого лица, в котором серия возвращается к легендарным масштабным сражениям. В будущем, где царит хаос, адаптируйтесь и процветайте на постоянно меняющихся полях боя благодаря своему отряду и арсеналу новейших технологий."
@@ -33,7 +33,7 @@
 				"Глубокий сюжет",
 				"Протагонистка"
 			],
-			"video": "https: //www.youtube.com/embed/b6CkzwVAr0M",
+			"video": "https://www.youtube.com/embed/b6CkzwVAr0M",
 			"price": 3021,
 			"id": 3,
 			"description": "Алекс Чэнь от всех скрывает своё «проклятие» — сверхъестественную способность считывать сильные эмоции других и влиять на них. Но когда её брат погибает — якобы в результате несчастного случая, — Алекс использует её, чтобы узнать правду."
@@ -45,7 +45,7 @@
 				"Открытый мир",
 				"Экшен"
 			],
-			"video": "https: //www.youtube.com/embed/QkkoHAzjnUs",
+			"video": "https://www.youtube.com/embed/QkkoHAzjnUs",
 			"price": 789,
 			"id": 4,
 			"description": "Grand Theft Auto V для PC позволяет игрокам исследовать знаменитый мир Лос-Сантоса и округа Блэйн в разрешении до 4k и выше с частотой 60 кадров в секунду."
@@ -53,7 +53,7 @@
 		{
 			"image": "/game-covers/rainbow_siege.jpeg",
 			"title": "Tom Clancy's Rainbow Six® Siege",
-			"video": "https: //www.youtube.com/embed/6wlvYh0h63k",
+			"video": "https://www.youtube.com/embed/6wlvYh0h63k",
 			"genres": [
 				"Тактика",
 				"Шутер"
@@ -70,10 +70,46 @@
 				"РПГ",
 				"Открытый мир"
 			],
-			"video": "https: //www.youtube.com/embed/ssrNcwxALS4",
+			"video": "https://www.youtube.com/embed/ssrNcwxALS4",
 			"price": 2863,
 			"id": 6,
 			"description": "Assassin’s Creed Valhalla — мультиплатформенная компьютерная игра в жанре action/RPG, разработанная студией Ubisoft Montreal под издательством компании Ubisoft. Является двенадцатой игрой в серии игр Assassin’s Creed."
+		},
+		{
+			"image": "/game-covers/assassins_creed_valhalla.png",
+			"title": "Resident Evil 4 Remake",
+			"genres": [
+				"Экшен",
+				"Хоррор"
+			],
+			"video": "https://www.youtube.com/embed/-L1EuRo54pI",
+			"price": 4549,
+			"id": 7,
+			"description": "Resident Evil 4 Remake — это переиздание Resident Evil 4. В игре будет обновленная графика в высоком разрешении, добавлена новая система трофеев."
+		},
+		{
+			"image": "/game-covers/assassins_creed_valhalla.png",
+			"title": "Hogwarts Legacy",
+			"genres": [
+				"Экшен",
+				"Открытый мир"
+			],
+			"video": "https://www.youtube.com/embed/1O6Qstncpnc",
+			"price": 2649,
+			"id": 8,
+			"description": "Hogwarts Legacy — это ролевая игра с открытым миром, действие которой происходит в мире, впервые представленном в книгах о Гарри Поттере. Отправляйтесь в путешествие по знакомым и новым локациям, исследуйте и открывайте волшебных зверей, настраивайте своего персонажа и изготавливайте зелья, осваивайте заклинания, улучшайте таланты и становитесь волшебником, которым хотите быть."
+		},
+		{
+			"image": "/game-covers/assassins_creed_valhalla.png",
+			"title": "Hogwarts Legacy",
+			"genres": [
+				"Экшен",
+				"Открытый мир"
+			],
+			"video": "https://www.youtube.com/embed/1O6Qstncpnc",
+			"price": 2649,
+			"id": 8,
+			"description": "Hogwarts Legacy — это ролевая игра с открытым миром, действие которой происходит в мире, впервые представленном в книгах о Гарри Поттере. Отправляйтесь в путешествие по знакомым и новым локациям, исследуйте и открывайте волшебных зверей, настраивайте своего персонажа и изготавливайте зелья, осваивайте заклинания, улучшайте таланты и становитесь волшебником, которым хотите быть."
 		}
 	]
 }

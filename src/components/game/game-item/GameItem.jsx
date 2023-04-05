@@ -1,7 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import GameBuy from '../game-buy/GameBuy';
 import GameCover from '../game-cover/GameCover';
-import GameGenres from '../game-genres/GameGenres';
 import styles from './GameItem.module.css';
 import { useDispatch } from 'react-redux';
 import { setCurrentGame } from '../../../store/games/reducer';

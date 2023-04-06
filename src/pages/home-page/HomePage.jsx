@@ -34,11 +34,13 @@ const HomePage = () => {
 	}
 
 	return (
-		<div className={styles.homepage}>
-			<GamePages
-				pageNumber={pageNumber}
-				gamesPerPage={gamesPerPage}
-			/>
+		<>
+			<div className={styles.homepage}>
+				<GamePages
+					pageNumber={pageNumber}
+					gamesPerPage={gamesPerPage}
+				/>
+			</div>
 			{gamesList.length ? (
 				<ReactPaginate
 					pageCount={pageCount}
@@ -53,7 +55,7 @@ const HomePage = () => {
 					activeClassName={styles.active}
 				/>
 			) : null}
-		</div>
+		</>
 	);
 };
 export default HomePage;

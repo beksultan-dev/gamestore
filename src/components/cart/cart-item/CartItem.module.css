@@ -9,4 +9,14 @@
 .price {
 	display: flex;
 	align-items: center;
+	position: relative;
+	padding-right: 35px;
+}
+
+.delete {
+	color: rgb(194, 12, 12);
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
 }

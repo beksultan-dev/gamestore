@@ -7,8 +7,6 @@ import GameBuy from '../../components/game/game-buy/GameBuy';
 const GamePage = () => {
 	const game = useSelector((state) => state.games.currentGame);
 
-	if (!game) return null;
-
 	return (
 		<div className={styles.gamepage}>
 			<h1 className={styles.title}>{game.title}</h1>

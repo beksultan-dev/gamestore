@@ -1,15 +1,26 @@
+import { useDispatch } from 'react-redux';
 import { calcTotalPrice } from '../../../utils/totalPrice';
 import Button from '../../button/Button';
 import CartItem from '../cart-item/CartItem';
 import styles from './CartMenu.module.css';
+import { deleteFromCart } from '../../../store/cart/reducer';
 
 const CartMenu = ({ items, onCLick = () => null }) => {
+	const dispatch = useDispatch();
+	const onDelete = (id) => {
+		dispatch(deleteFromCart(id));
+	};
+
 	return (
 		<div className={styles.cartmenu}>
 			<div className={styles.list}>
 				{items.length ? (
 					items.map((item) => (
-						<CartItem key={item.title} {...item} />
+						<CartItem
+							key={item.title}
+							{...item}
+							onDelete={onDelete}
+						/>
 					))
 				) : (
 					<span className={styles.cart_empty}>

@@ -67,6 +67,15 @@
 	z-index: 222;
 }
 
+@media (max-width: 568px) {
+	.select > div {
+		position: static;
+		top: -66px;
+		left: 155px;
+		z-index: 222;
+	}
+}
+
 .select * {
 	color: black;
 	outline: none;

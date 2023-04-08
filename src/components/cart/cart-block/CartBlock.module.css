@@ -16,6 +16,12 @@
 	font-weight: 500;
 }
 
+@media (max-width: 568px) {
+	.price {
+		display: none;
+	}
+}
+
 .cart_wrapper {
 	position: relative;
 	display: flex;

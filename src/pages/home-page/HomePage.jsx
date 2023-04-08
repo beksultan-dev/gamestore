@@ -3,23 +3,26 @@ import styles from './HomePage.module.css';
 import ReactPaginate from 'react-paginate';
 import { GamePages } from '../../utils/paginate';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAsyncData } from '../../store/list/reducer';
+import { getAsyncData, getSorted } from '../../store/list/reducer';
+import Select from 'react-select';
+import { options } from '../../utils/options';
 
 const HomePage = () => {
-	const [pageNumber, setPageNumber] = useState(0);
-
 	const dispatch = useDispatch();
+	const [currentPage, setCurrentPage] = useState(0);
+	const [selectedOption, setSelectedOption] = useState(options[0]);
 
 	const gamesList = useSelector((state) => state.list.gamesList);
 	const status = useSelector((state) => state.list.status);
 	const error = useSelector((state) => state.list.error);
 
-	const gamesPerPage = 6;
-	const pageCount = Math.ceil(gamesList.length / gamesPerPage);
-
 	useEffect(() => {
 		dispatch(getAsyncData());
+		dispatch(getSorted(selectedOption));
 	}, [dispatch]);
+
+	const gamesPerPage = 6;
+	const pageCount = Math.ceil(gamesList.length / gamesPerPage);
 
 	if (status === 'pending') {
 		return (
@@ -33,11 +36,34 @@ const HomePage = () => {
 		return <h1>{error}</h1>;
 	}
 
+	const handleChange = (option) => {
+		dispatch(getSorted(option.value));
+		setSelectedOption(option);
+	};
+
 	return (
 		<>
+			<div className={styles.select}>
+				<Select
+					onChange={handleChange}
+					options={options}
+					styles={styles.select}
+					isSearchable={false}
+					value={selectedOption}
+					theme={(theme) => ({
+						...theme,
+						borderRadius: 10,
+						colors: {
+							...theme.colors,
+							primary25: 'grey',
+							primary: 'black',
+						},
+					})}
+				/>
+			</div>
 			<div className={styles.homepage}>
 				<GamePages
-					pageNumber={pageNumber}
+					pageNumber={currentPage}
 					gamesPerPage={gamesPerPage}
 				/>
 			</div>
@@ -45,7 +71,7 @@ const HomePage = () => {
 				<ReactPaginate
 					pageCount={pageCount}
 					onPageChange={({ selected }) => {
-						setPageNumber(selected);
+						setCurrentPage(selected);
 					}}
 					previousLabel={'Назад'}
 					nextLabel={'Вперед'}
@@ -53,6 +79,7 @@ const HomePage = () => {
 					previousLinkClassName={styles.prev}
 					nextLinkClassName={styles.next}
 					activeClassName={styles.active}
+					forcePage={currentPage}
 				/>
 			) : null}
 		</>

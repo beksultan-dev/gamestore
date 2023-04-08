@@ -16,10 +16,21 @@ export const getAsyncData = createAsyncThunk(
 	}
 );
 
+export const getSorted = createAsyncThunk(
+	'list/getSorted',
+	async ({ sortBy, order }) => {
+		const json = await axios.get(
+			`${URL}?sortBy=${sortBy}&order=${order}`
+		);
+		return json.data;
+	}
+);
+
 const list = createSlice({
 	name: 'list',
 	initialState: {
 		gamesList: [],
+		sortedList: [],
 		status: null,
 		error: null,
 	},
@@ -36,6 +47,14 @@ const list = createSlice({
 		[getAsyncData.rejected]: (state, action) => {
 			state.error = action.payload;
 			state.status = 'rejected';
+		},
+		[getSorted.pending]: (state, action) => {
+			state.error = null;
+			state.status = 'pending';
+		},
+		[getSorted.fulfilled]: (state, action) => {
+			state.sortedList = action.payload;
+			state.status = 'fulfilled';
 		},
 	},
 });

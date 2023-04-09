@@ -18,9 +18,13 @@ export const getAsyncData = createAsyncThunk(
 
 export const getSorted = createAsyncThunk(
 	'list/getSorted',
-	async ({ sortBy, order }) => {
+	async ({ value: { sortBy, order }, inputValue }) => {
+		const getBySort = `?sortBy=${sortBy}`;
+		const getByOrder = `&order=${order}`;
+		const getByInput = inputValue ? `&search=${inputValue}` : '';
+
 		const json = await axios.get(
-			`${URL}?sortBy=${sortBy}&order=${order}`
+			`${URL}${getBySort}${getByOrder}${getByInput}`
 		);
 		return json.data;
 	}
@@ -50,11 +54,9 @@ const list = createSlice({
 		},
 		[getSorted.pending]: (state, action) => {
 			state.error = null;
-			state.status = 'pending';
 		},
 		[getSorted.fulfilled]: (state, action) => {
 			state.sortedList = action.payload;
-			state.status = 'fulfilled';
 		},
 	},
 });

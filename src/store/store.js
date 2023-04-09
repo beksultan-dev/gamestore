@@ -14,13 +14,11 @@ import storage from 'redux-persist/lib/storage';
 import cartReducer from './cart/reducer';
 import gamesReducer from './games/reducer';
 import listReducer from './list/reducer';
-import sortedSlice from './sorted-list/reducer';
 
 const rootReducer = combineReducers({
 	cart: cartReducer,
 	games: gamesReducer,
 	list: listReducer,
-	sort: sortedSlice,
 });
 
 const persistConfig = {

@@ -17,7 +17,7 @@
 
 @media (max-width: 1260px) {
 	.gameitem {
-		width: 44vw;
+		width: 49%;
 	}
 
 	.gameitem:not(:last-child) {
@@ -37,6 +37,12 @@
 
 	.genres {
 		row-gap: 6px;
+	}
+}
+
+@media (max-width: 768px) {
+	.gameitem {
+		min-height: 420px;
 	}
 }
 

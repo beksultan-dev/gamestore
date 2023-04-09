@@ -1,0 +1,13 @@
+.gameslist {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 0;
+	justify-content: flex-start;
+	gap: 2%;
+}
+
+@media (max-width: 1260px) {
+	.gameslist {
+		width: 100%;
+	}
+}

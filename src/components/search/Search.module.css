@@ -1,0 +1,29 @@
+.search {
+	position: relative;
+}
+
+.search input {
+	position: absolute;
+	z-index: 55;
+	top: -66px;
+	left: 350px;
+	padding: 10px 15px;
+	border-radius: 10px;
+	font-size: 16px;
+	outline: none;
+	border: none;
+}
+
+@media (max-width: 768px) {
+	.search {
+		position: static;
+		margin-right: 30px;
+		margin-bottom: 20px;
+	}
+
+	.search input {
+		position: static;
+		display: block;
+		width: 100%;
+	}
+}

@@ -1,0 +1,22 @@
+.select {
+	margin-bottom: 10px;
+	position: relative;
+}
+.select > div {
+	position: absolute;
+	top: -66px;
+	left: 155px;
+	z-index: 22;
+}
+
+@media (max-width: 568px) {
+	.select > div {
+		position: static;
+	}
+}
+
+.select * {
+	color: black;
+	outline: none;
+	cursor: pointer;
+}

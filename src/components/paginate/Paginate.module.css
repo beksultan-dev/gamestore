@@ -1,0 +1,20 @@
+.container {
+	background-color: rgb(52 53 55);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style-type: none;
+	padding: 10px 20px;
+	border-radius: 10px;
+	height: 30px;
+	gap: 30px;
+	width: max-content;
+	margin: 30px auto;
+	user-select: none;
+}
+
+.active {
+	border-radius: 5px;
+	background-color: rgb(25, 26, 28);
+	padding: 4px 10px;
+}

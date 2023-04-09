@@ -13,7 +13,6 @@ const GamePage = () => {
 			<div className={styles.content}>
 				<div className={styles.left}>
 					<iframe
-						// width="100%"
 						height="400px"
 						src={game.video}
 						title="Youtube Video Player"

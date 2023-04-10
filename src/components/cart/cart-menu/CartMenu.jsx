@@ -36,7 +36,7 @@ const CartMenu = ({ items, onCLick = () => null }) => {
 						<span>{calcTotalPrice(items)} сом</span>
 					</div>
 					<Button type="primary" onClick={onCLick}>
-						Оформить заказ
+						Перейти в корзину
 					</Button>
 				</div>
 			) : null}

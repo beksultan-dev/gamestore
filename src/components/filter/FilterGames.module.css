@@ -1,0 +1,17 @@
+.filter {
+	display: flex;
+	justify-content: flex-start;
+	gap: 5px;
+	margin-bottom: 25px;
+}
+
+.filter > button {
+	padding: 5px 20px;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 822px) {
+	.filter {
+		flex-wrap: wrap;
+	}
+}

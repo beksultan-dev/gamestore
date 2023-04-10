@@ -7,12 +7,15 @@ import { getAsyncData, getSorted } from '../../store/list/reducer';
 import { options } from '../../utils/options';
 import { GamesList } from '../../components/game/games-list/GamesList';
 import styles from './HomePage.module.css';
+import Button from '../../components/button/Button';
+import FilterGames from '../../components/filter/FilterGames';
 
 const HomePage = () => {
 	const dispatch = useDispatch();
 	const [currentPage, setCurrentPage] = useState(0);
 	const [selectedOption, setSelectedOption] = useState(options[0]);
 	const [inputValue, setInputValue] = useState('');
+	const [currentFilter, setCurrentFilter] = useState('');
 
 	const gamesList = useSelector((state) => state.list.sortedList);
 	const status = useSelector((state) => state.list.status);
@@ -20,12 +23,14 @@ const HomePage = () => {
 
 	useEffect(() => {
 		dispatch(getAsyncData());
-	}, [dispatch]);
+	}, []);
 
 	useEffect(() => {
-		dispatch(getSorted({ ...selectedOption, inputValue }));
+		dispatch(
+			getSorted({ ...selectedOption, inputValue, currentFilter })
+		);
 		setCurrentPage(0);
-	}, [selectedOption, inputValue]);
+	}, [selectedOption, inputValue, currentFilter]);
 
 	const itemsPerPage = 6;
 	const pageCount = Math.ceil(gamesList.length / itemsPerPage);
@@ -53,6 +58,7 @@ const HomePage = () => {
 				inputValue={inputValue}
 				setInputValue={setInputValue}
 			/>
+			<FilterGames setCurrentFilter={setCurrentFilter} />
 			<GamesList
 				gamesPerPage={itemsPerPage}
 				pagesVisited={pagesVisited}

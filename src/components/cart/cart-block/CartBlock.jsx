@@ -31,7 +31,13 @@ const CartBlock = () => {
 				) : null}
 			</div>
 			{isCartMenuVisible && (
-				<CartMenu items={items} onCLick={handleClick} />
+				<>
+					<CartMenu items={items} onCLick={handleClick} />
+					<div
+						className={styles.fade}
+						onClick={() => setCartMenuVisible(false)}
+					></div>
+				</>
 			)}
 		</div>
 	);

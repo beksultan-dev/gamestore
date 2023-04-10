@@ -18,13 +18,16 @@ export const getAsyncData = createAsyncThunk(
 
 export const getSorted = createAsyncThunk(
 	'list/getSorted',
-	async ({ value: { sortBy, order }, inputValue }) => {
+	async ({ value: { sortBy, order }, inputValue, currentFilter }) => {
 		const getBySort = `?sortBy=${sortBy}`;
 		const getByOrder = `&order=${order}`;
 		const getByInput = inputValue ? `&search=${inputValue}` : '';
+		const getByFilter = currentFilter
+			? `&filter=${currentFilter}`
+			: '';
 
 		const json = await axios.get(
-			`${URL}${getBySort}${getByOrder}${getByInput}`
+			`${URL}${getBySort}${getByOrder}${getByInput}${getByFilter}`
 		);
 		return json.data;
 	}

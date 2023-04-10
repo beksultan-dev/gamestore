@@ -8,12 +8,15 @@
 	position: relative;
 	font-size: 25px;
 	cursor: pointer;
+	z-index: 101;
 }
 
 .price {
+	position: relative;
 	margin-left: 15px;
 	font-size: 18px;
 	font-weight: 500;
+	z-index: 101;
 }
 
 @media (max-width: 568px) {
@@ -28,4 +31,14 @@
 	align-items: center;
 	cursor: pointer;
 	user-select: none;
+}
+
+.fade {
+	position: fixed;
+	z-index: 100;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.5);
 }

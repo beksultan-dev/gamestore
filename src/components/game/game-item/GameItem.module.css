@@ -40,15 +40,18 @@
 	}
 }
 
-@media (max-width: 768px) {
-	.gameitem {
-		min-height: 420px;
-	}
-}
-
 .title {
 	font-size: 18px;
 	font-weight: bold;
+}
+
+@media (max-width: 768px) {
+	.gameitem {
+		min-height: 430px;
+	}
+	.title {
+		font-size: 22px;
+	}
 }
 
 .genres {

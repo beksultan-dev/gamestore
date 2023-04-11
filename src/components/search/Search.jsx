@@ -1,5 +1,5 @@
 import styles from './Search.module.css';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import { setCurrentGame } from '../../store/games/reducer';
 import { useNavigate } from 'react-router-dom';
@@ -36,6 +36,7 @@ const Search = ({ inputValue, setInputValue }) => {
 					{item.title}
 				</div>
 			);
+		return null;
 	});
 
 	const onFocusChange = () => {

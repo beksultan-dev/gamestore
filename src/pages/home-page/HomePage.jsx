@@ -7,7 +7,6 @@ import { getAsyncData, getSorted } from '../../store/list/reducer';
 import { options } from '../../utils/options';
 import { GamesList } from '../../components/game/games-list/GamesList';
 import styles from './HomePage.module.css';
-import Button from '../../components/button/Button';
 import FilterGames from '../../components/filter/FilterGames';
 
 const HomePage = () => {
@@ -23,14 +22,14 @@ const HomePage = () => {
 
 	useEffect(() => {
 		dispatch(getAsyncData());
-	}, []);
+	}, [dispatch]);
 
 	useEffect(() => {
 		dispatch(
 			getSorted({ ...selectedOption, inputValue, currentFilter })
 		);
 		setCurrentPage(0);
-	}, [selectedOption, inputValue, currentFilter]);
+	}, [selectedOption, inputValue, currentFilter, dispatch]);
 
 	const itemsPerPage = 6;
 	const pageCount = Math.ceil(gamesList.length / itemsPerPage);

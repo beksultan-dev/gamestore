@@ -19,6 +19,7 @@ const FilterGames = ({ setCurrentFilter }) => {
 				<Button
 					onClick={() => handleClick(item.action, index + 1)}
 					type={active === index + 1 ? 'primary' : 'secondary'}
+					key={index + 1}
 				>
 					{item.title}
 				</Button>

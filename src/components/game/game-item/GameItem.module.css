@@ -38,6 +38,10 @@
 	.genres {
 		row-gap: 6px;
 	}
+
+	.quickviewer {
+		display: none;
+	}
 }
 
 .title {
@@ -73,4 +77,20 @@
 	position: absolute;
 	right: 15px;
 	bottom: 15px;
+}
+
+.quickviewer {
+	position: absolute;
+	left: 20px;
+	bottom: 48px;
+	border: none;
+	border-radius: 10px;
+	padding: 5px 10px;
+	background-color: inherit;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.386);
+}
+.quickviewer:hover {
+	cursor: pointer;
+	text-decoration: underline;
 }

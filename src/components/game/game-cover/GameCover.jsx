@@ -1,10 +1,10 @@
 import styles from './GameCover.module.css';
 
-const GameCover = ({ image }) => {
+const GameCover = ({ image, style = {} }) => {
 	return (
 		<div
 			className={styles.cover}
-			style={{ backgroundImage: `url(${image})` }}
+			style={{ backgroundImage: `url(${image})`, ...style }}
 		/>
 	);
 };

@@ -4,6 +4,7 @@ import Button from '../../button/Button';
 import CartItem from '../cart-item/CartItem';
 import styles from './CartMenu.module.css';
 import { deleteFromCart } from '../../../store/cart/reducer';
+import { motion } from 'framer-motion';
 
 const CartMenu = ({ items, onCLick = () => null }) => {
 	const dispatch = useDispatch();
@@ -12,7 +13,13 @@ const CartMenu = ({ items, onCLick = () => null }) => {
 	};
 
 	return (
-		<div className={styles.cartmenu}>
+		<motion.div
+			className={styles.cartmenu}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.1 }}
+		>
 			<div className={styles.list}>
 				{items.length ? (
 					items.map((item) => (
@@ -40,7 +47,7 @@ const CartMenu = ({ items, onCLick = () => null }) => {
 					</Button>
 				</div>
 			) : null}
-		</div>
+		</motion.div>
 	);
 };
 export default CartMenu;

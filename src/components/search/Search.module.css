@@ -1,24 +1,82 @@
 .search {
+	display: block;
 	position: relative;
 }
 
 .search input {
 	position: absolute;
 	z-index: 55;
-	top: -66px;
-	left: 380px;
-	padding: 10px 15px;
-	border-radius: 10px;
+	top: -67px;
+	right: 150px;
+	padding: 10px 40px 10px 20px;
+	border-radius: 20px;
 	font-size: 16px;
 	outline: none;
 	border: none;
-	width: 18vw;
+	width: 300px;
+	background-color: rgb(52 53 55);
+	color: white;
+}
+
+.hints {
+	box-sizing: border-box;
+	position: absolute;
+	padding: 10px 20px;
+	top: -28px;
+	right: 150px;
+	z-index: 55;
+	width: 360px;
+	background-color: rgb(80, 82, 84);
+	border-radius: 0 0 20px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.search_items {
+	text-align: left;
+	width: 100%;
+	cursor: pointer;
+}
+
+.search_items:not(:last-child) {
+	padding-bottom: 10px;
+	border-bottom: 1px solid grey;
+}
+
+.noitems {
+	text-align: center;
+	cursor: default;
+}
+
+@media (max-width: 1000px) {
+	.search {
+		position: static;
+		margin-bottom: 30px;
+		width: 100%;
+	}
+
+	.search input {
+		box-sizing: border-box;
+		position: static;
+		display: block;
+		width: inherit;
+		padding: 10px 40px;
+		font-size: 18px;
+		margin-right: 50px;
+	}
+
+	.hints {
+		position: static;
+		width: 100%;
+	}
 }
 
 @media (max-width: 768px) {
 	.search {
 		position: static;
-		margin-right: 30px;
 		margin-bottom: 20px;
 	}
 

@@ -6,6 +6,7 @@ import { calcTotalPrice } from '../../../utils/totalPrice';
 import { useCallback, useState } from 'react';
 import CartItemsQuantity from '../cart-items-quantity/CartItemsQuantity';
 import { useNavigate } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
 const CartBlock = () => {
 	const [isCartMenuVisible, setCartMenuVisible] = useState(false);
@@ -30,15 +31,17 @@ const CartBlock = () => {
 					<span className={styles.price}>{finalPrice} сом</span>
 				) : null}
 			</div>
-			{isCartMenuVisible && (
-				<>
-					<CartMenu items={items} onCLick={handleClick} />
-					<div
-						className={styles.fade}
-						onClick={() => setCartMenuVisible(false)}
-					></div>
-				</>
-			)}
+			<AnimatePresence>
+				{isCartMenuVisible && (
+					<>
+						<CartMenu items={items} onCLick={handleClick} />
+						<div
+							className={styles.fade}
+							onClick={() => setCartMenuVisible(false)}
+						></div>
+					</>
+				)}
+			</AnimatePresence>
 		</div>
 	);
 };
